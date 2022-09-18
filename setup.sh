@@ -13,14 +13,27 @@ ibus restart
 env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engines "['BambooUs', 'Bamboo']" && gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('ibus', 'Bamboo')]"
 
 sudo apt-get install git -y
+sudo apt-get  install curl  -y
 
 # Vim, Neovim
+sudo add-apt-repository ppa:neovim-ppa/stable
+sudo apt-get update
 sudo apt-get install neovim -y
+
 cp .vimrc ~/
 cp -r nvim ~/.config/
 # install vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+# Reload after add pakage: source %
+# PlugInstall to install
+# :PlugUpdate to update or :PlugClean to remove unsuse plugins
+
+
+
 
 # media codecs to play various kinds of media files
 sudo apt-get install ubuntu-restricted-extras -y
+sudo snap install sublime-text --classic
+
+# sudo apt-get install python-dev python-pip python3-dev python3-pip
