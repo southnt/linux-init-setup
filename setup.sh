@@ -25,6 +25,10 @@ cp -r nvim ~/.config/
 # install vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+# For vim
+# curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+#     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # Reload after add pakage: source %
 # PlugInstall to install
 # :PlugUpdate to update or :PlugClean to remove unsuse plugins
