@@ -20,6 +20,11 @@ sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt-get update
 sudo apt-get install neovim -y
 
+# Install font for neovim
+# Set terminal font to Droid Sans Nerd Font Complete
+mkdir -p ~/.local/share/fonts
+cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+
 cp .vimrc ~/
 cp -r nvim ~/.config/
 # install vim-plug
